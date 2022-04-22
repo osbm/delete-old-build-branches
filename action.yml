@@ -4,6 +4,19 @@ author: Osman Faruk Bayram
 branding:
   icon: trash-2
   color: yellow
+
+input:
+  github_token:
+    description: "The github token to use on requests to the github api"
+    required: true
+
+output:
+  branches:
+    description: "The list of branches that will be deleted"
+    type: array
+    items:
+      type: string
+
 runs:
   using: "composite"
   steps:
