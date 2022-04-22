@@ -26,6 +26,6 @@ runs:
         pip install pyGitHub
 
     - name: Delete old build branches
-      shell: python
+      shell: bash
       run: |
-        print("hello world")
+        python entrypoint.py
