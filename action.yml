@@ -1,0 +1,18 @@
+name: Delete old build branches
+description: Delete old build branches
+author: Osman Faruk Bayram
+branding:
+  icon: trash-2
+  color: yellow
+runs:
+  using: "composite"
+  steps:
+    - name: Install 
+      shell: bash
+      run: |
+        pip install pyGitHub
+
+    - name: Delete old build branches
+      shell: python
+      run: |
+        print("hello world")
