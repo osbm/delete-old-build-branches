@@ -12,12 +12,12 @@ input:
     required: true
 
 output:
-  branches:
-    description: "The list of branches that will be deleted"
-    type: array
-    items:
-      type: string
+  deleted_branches:
+    description: "The list of branches that has been deleted"
 
 runs:
   using: docker
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.github_token }}
+    - '{{ branches }}'
