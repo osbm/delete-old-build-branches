@@ -4,7 +4,9 @@ from github import Github
 from github.GithubException import GithubException
 
 # get the token from the environment variable
-token = os.environ['GITHUB_TOKEN']
+# token = os.environ['GITHUB_TOKEN']
+
+
 for k, v in sorted(os.environ.items()):
     print(k+':', v)
 print('\n')
