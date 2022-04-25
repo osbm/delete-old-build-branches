@@ -5,7 +5,7 @@ from github.GithubException import GithubException
 from github.GithubException import UnknownObjectException
 
 g = Github(os.environ["INPUT_GITHUB_TOKEN"])
-repo = g.get_repo(os.environ["GITHUB_ACTION_REPOSITORY"])
+repo = g.get_repo(os.environ["GITHUB_REPOSITORY"])
 branches = repo.get_branches()
 
 # thanks to https://github.com/abulka in
