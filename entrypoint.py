@@ -17,5 +17,8 @@ from github.GithubException import GithubException
 g = Github(os.environ["INPUT_GITHUB_TOKEN"])
 repo = g.get_repo('osbm/osbm-CV')
 branches = repo.get_branches()
+for branch in branches:
+    print(branch.name)
+
 print(f"{branches = }")
 
