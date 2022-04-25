@@ -6,10 +6,10 @@ branding:
   icon: trash-2
   color: yellow
 
-input:
-  github_token:
-    description: "The github token to use on requests to the github api"
-    required: true
+#input:
+#  github_token:
+#    description: "The github token to use on requests to the github api"
+#    required: true
 
 output:
   deleted_branches:
@@ -18,5 +18,5 @@ output:
 runs:
   using: docker
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.github_token }}
+#  args:
+#    - ${{ inputs.github_token }}
