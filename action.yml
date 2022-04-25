@@ -20,4 +20,3 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.github_token }}
-    - '{{ branches }}'
