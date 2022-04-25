@@ -23,6 +23,6 @@ build_branches = [branch for branch in branch_names if branch.startswith("build-
 print(f"{build_branches=}")
 
 for branch in build_branches:
-    if branch[7:] not in branch_names: # these are good branches
+    if branch[6:] not in branch_names: # these are good branches
         print(f"Deleting branch {branch}")
         delete_branch(branch)
