@@ -10,7 +10,6 @@ token = os.environ['GITHUB_TOKEN']
 repo_name = os.environ['GITHUB_REPOSITORY']
 print(f"{repo_name = }")
 
-
 # get all branches
 g = Github(token)
 repo = g.get_repo('osbm/osbm-CV')
