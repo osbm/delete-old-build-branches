@@ -7,12 +7,6 @@ from github.GithubException import GithubException
 # token = os.environ['GITHUB_TOKEN']
 
 
-for k, v in sorted(os.environ.items()):
-    print(k+':', v)
-print('\n')
-# list elements in path environment variable
-[print(item) for item in os.environ['PATH'].split(';')]
-
 
 # get the repo name from the environment variable
 # repo_name = os.environ['GITHUB_REPOSITORY']
@@ -20,7 +14,7 @@ print('\n')
 
 # get all branches
 
-g = Github(token)
+g = Github(os.environ["INPUT_GITHUB_TOKEN"])
 repo = g.get_repo('osbm/osbm-CV')
 branches = repo.get_branches()
 print(f"{branches = }")
